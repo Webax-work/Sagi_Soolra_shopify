@@ -1,0 +1,102 @@
+<div class="console-layout-sec">
+  <div class="container">
+    {% if section.settings.title != blank %}
+      <div class="console-txt-col">
+        <h3>{{ section.settings.title }}</h3>
+      </div>
+    {% endif %}
+
+    <div class="inner-console-same-coll">
+      {% if section.settings.desktop_image != blank %}
+        <div class="inner-console-image-box">
+          <img src="{{ section.settings.desktop_image | img_url: 'master' }}">
+        </div>
+      {% endif %}
+
+      {% if section.settings.mobile_image != blank %}
+        <div class="inner-console-image-box-mobile">
+          <img src="{{ section.settings.mobile_image | img_url: 'master' }}">
+        </div>
+      {% endif %}
+
+      <div class="soolra-btn-coll console-layout-btn">
+        {% if section.settings.buy_now_link != blank %}
+          <div class="buy-btn">
+            <a href="{{ section.settings.buy_now_link }}">
+              {{ section.settings.buy_now_text }}
+            </a>
+          </div>
+        {% endif %}
+
+        {% if section.settings.app_store_link != blank %}
+          <div class="apple-btn">
+            <a href="{{ section.settings.app_store_link }}" class="app-store-btn">
+              <span class="apple-icon"><i class="fa-brands fa-apple"></i></span>
+              <div class="btn-text">
+                <small>{{ section.settings.app_store_small_text }}</small>
+                <strong>{{ section.settings.app_store_main_text }}</strong>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Console",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Console Layout"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "url",
+      "id": "buy_now_link",
+      "label": "Buy Now Button Link"
+    },
+    {
+      "type": "text",
+      "id": "buy_now_text",
+      "label": "Buy Now Button Text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "app_store_link",
+      "label": "App Store Button Link"
+    },
+    {
+      "type": "text",
+      "id": "app_store_small_text",
+      "label": "App Store Small Text",
+      "default": "Download on the"
+    },
+    {
+      "type": "text",
+      "id": "app_store_main_text",
+      "label": "App Store Main Text",
+      "default": "App Store"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Console"
+    }
+  ]
+}
+{% endschema %}

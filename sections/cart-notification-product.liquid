@@ -1,0 +1,76 @@
+{%- if cart != empty -%}
+  {%- for item in cart.items -%}
+    <div id="cart-notification-product-{{ item.key }}" class="cart-item">
+      {%- if item.image -%}
+        <div class="cart-notification-product__image global-media-settings">
+          <img
+            src="{{ item.image | image_url: width: 140 }}"
+            alt="{{ item.image.alt | escape }}"
+            width="70"
+            height="{{ 70 | divided_by: item.image.aspect_ratio | ceil }}"
+            loading="lazy"
+          >
+        </div>
+      {%- endif -%}
+      <div>
+        {%- if settings.show_vendor -%}
+          <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
+        {%- endif -%}
+        <h3 class="cart-notification-product__name h4">{{ item.product.title | escape }}</h3>
+
+        <div class="variant-selectorss">
+          <label for="iphone-model-{{ item.key }}">Select iPhone Model:</label>
+          <select
+            id="iphone-model-{{ item.key }}"
+            class="variant-select-iphone"
+            data-cart-item-key="{{ item.key }}"
+            name="properties[iphone_model]" 
+          >
+            <option value="iPhone 12" {%- if item.properties['iphone_model'] == 'iPhone 12' %} selected {%- endif -%}>iPhone 12</option>
+            <option value="iPhone 13" {%- if item.properties['iphone_model'] == 'iPhone 13' %} selected {%- endif -%}>iPhone 13</option>
+            <option value="iPhone 14" {%- if item.properties['iphone_model'] == 'iPhone 14' %} selected {%- endif -%}>iPhone 14</option>
+            <option value="iPhone 15" {%- if item.properties['iphone_model'] == 'iPhone 15' %} selected {%- endif -%}>iPhone 15</option>
+            <option value="iPhone 13 Pro" {%- if item.properties['iphone_model'] == 'iPhone 13 Pro' %} selected {%- endif -%}>iPhone 13 Pro</option>
+            <option value="iPhone 14 Pro" {%- if item.properties['iphone_model'] == 'iPhone 14 Pro' %} selected {%- endif -%}>iPhone 14 Pro</option>
+            <option value="iPhone 15 Pro" {%- if item.properties['iphone_model'] == 'iPhone 15 Pro' %} selected {%- endif -%}>iPhone 15 Pro</option>
+            <option value="iPhone 16 Pro" {%- if item.properties['iphone_model'] == 'iPhone 16 Pro' %} selected {%- endif -%}>iPhone 16 Pro</option>
+          </select>
+        </div>
+
+        <!-- Existing variant info (for other options) -->
+        <dl>
+          {%- unless item.product.has_only_default_variant -%}
+            {%- for option in item.options_with_values -%}
+              <div class="product-option">
+                <dt>{{ option.name }}:</dt>
+                <dd>{{ option.value }}</dd>
+              </div>
+            {%- endfor -%}
+          {%- endunless -%}
+
+          {%- for property in item.properties -%}
+            {%- assign property_first_char = property.first | slice: 0 -%}
+            {%- if property.last != blank and property_first_char != '_' -%}
+              <div class="product-option">
+                <dt>{{ property.first }}:</dt>
+                <dd>
+                  {%- if property.last contains '/uploads/' -%}
+                    <a href="{{ property.last }}" class="link" target="_blank">
+                      {{ property.last | split: '/' | last }}
+                    </a>
+                  {%- else -%}
+                    {{ property.last }}
+                  {%- endif -%}
+                </dd>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </dl>
+
+        {%- if item.selling_plan_allocation != null -%}
+          <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endfor -%}
+{%- endif -%}

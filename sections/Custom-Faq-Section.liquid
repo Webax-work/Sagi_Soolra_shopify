@@ -1,0 +1,155 @@
+<div class="faq-main-sec">
+  <div class="container">
+    <div class="row">
+      <div class="inner-faq-sec">
+        <div class="faq-content-coll">
+          <h3>{{ section.settings.faq_heading }}</h3>
+          <p>{{ section.settings.faq_description }}</p>
+        </div>
+
+        <div class="inner-faq-accordion-sec">
+          <div class="faq-btn-coll">
+            {% for block in section.blocks %}
+              {% if block.type == 'category' %}
+                <div class="faq-btn-box">
+                  <button>
+                    <div class="btn-image-box">
+                      <img src="{{ block.settings.category_icon | img_url: 'master' }}">
+                    </div>
+                    <div class="btn-txt">
+                      <span>{{ block.settings.category_label }}</span>
+                    </div>
+                  </button>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <div class="accordion-main-coll">
+            <div class="accordion">
+              {% for block in section.blocks %}
+                {% if block.type == 'faq' %}
+                  <div class="accordion-item">
+                    <button class="accordion-header">
+                      <h4>{{ block.settings.question }}</h4>
+                      <img class="icon"
+                        src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/plus-icon.svg?v=1744225383"
+                        alt="Toggle Icon">
+                    </button>
+                    <div class="accordion-content">
+                      <div class="accordiion-para-txt">
+                        <p>{{ block.settings.answer }}</p>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="climb-rope-image-box">
+        <img src="{{ section.settings.rope_image | img_url: 'master' }}">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+   document.querySelectorAll('.accordion-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement;
+            const icon = button.querySelector('.icon');
+            const allItems = document.querySelectorAll('.accordion-item');
+
+            allItems.forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('active');
+                    i.querySelector('.icon').src = "https://cdn.shopify.com/s/files/1/0738/5900/6705/files/plus-icon.svg?v=1744225383";
+                }
+            });
+
+            const isActive = item.classList.contains('active');
+            item.classList.toggle('active');
+            icon.src = isActive
+                ? "https://cdn.shopify.com/s/files/1/0738/5900/6705/files/plus-icon.svg?v=1744225383"
+                : "https://cdn.shopify.com/s/files/1/0738/5900/6705/files/minus-icon.svg?v=1744225384";
+        });
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Faq",
+  "settings": [
+    {
+      "type": "text",
+      "id": "faq_heading",
+      "label": "FAQ Heading",
+      "default": "FAQ"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_description",
+      "label": "FAQ Description",
+      "default": "Before reaching out, please check our comprehensive FAQ section. You might find a quick answer to your question:"
+    },
+    {
+      "type": "image_picker",
+      "id": "rope_image",
+      "label": "Rope Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "FAQ Category Button",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "category_icon",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "category_label",
+          "label": "Button Text",
+          "default": "Category"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Where can I buy the console?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "You can purchase it from our online store or through authorized retailers."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Faq",
+      "blocks": [
+        {
+          "type": "category"
+        },
+        {
+          "type": "faq"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

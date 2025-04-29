@@ -1,0 +1,815 @@
+ <div class="sinppets_popup" style=" transform: translateY(-200%);    visibility: hidden; ">
+<div class="fixed_area" >
+  <div class="inter_cont"> 
+   <div class="contet_popup">
+     <div class="slide_item">
+<div class="iframe_video">
+  <!-- {% for i in (1..5) %}
+  <div class="video_parent">
+    <div>
+      <span class="actions_btns">
+        <div class="close_video">
+          <span>
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+  <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+</path></svg></span>
+          
+        </div>
+       <div class="play_btn pp_btn"><span> <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.547 12.4326C19.8163 12.6325 19.8163 13.0357 19.547 13.2356L10.9304 19.6318C10.6004 19.8767 10.1323 19.6412 10.1323 19.2303L10.1323 6.43788C10.1323 6.027 10.6004 5.7915 10.9304 6.03641L19.547 12.4326Z" fill="#FFFFFF"></path></svg>
+       </span> </div>
+        <div class="pause_btn pp_btn" style="display:none;"> <span> <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.60449 18.3375L9.60449 7.66309" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.6963 18.3375L16.6963 7.66309" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </span>
+        </div>
+        <div class="muted_btns">
+          <span class="mute_1">
+<svg class="mute_1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9921 6.22363C17.4697 6.22363 21 7.94976 21 12.2293C21 17.0022 16.4693 18.6891 14.9921 18.6891" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.6243 9.47412C16.2021 9.71658 17.4254 10.4558 17.4254 12.1628C17.4254 14.1423 16.2021 14.8333 15.6243 15.1566" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.47864 15.4464C3.66406 15.4287 3 14.7646 3 13.9412V10.8865C3 10.0631 3.66406 9.39901 4.47864 9.38131L6.78072 9.34589L11.1192 4.17965C11.2002 4.102 11.302 4.04969 11.4122 4.02913C11.5225 4.00857 11.6363 4.02067 11.7398 4.06393C11.8432 4.1072 11.9318 4.17975 11.9946 4.27266C12.0574 4.36558 12.0917 4.47481 12.0932 4.58694V19.4131C12.0917 19.5252 12.0574 19.6344 11.9946 19.7274C11.9318 19.8203 11.8432 19.8928 11.7398 19.9361C11.6363 19.9793 11.5225 19.9914 11.4122 19.9709C11.302 19.9503 11.2002 19.898 11.1192 19.8204L6.78072 15.4818L4.47864 15.4464Z" fill="#FFFFFF"></path></svg>
+</span>  <span class="mute_2" style="display:none;"><svg class="mute_2"   width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9921 5.4303C14.5779 5.4303 14.2421 5.76608 14.2421 6.1803C14.2421 6.59451 14.5779 6.9303 14.9921 6.9303V5.4303ZM14.9921 6.9303C19.6072 6.9303 21.7286 12.3311 19.1167 15.3564L20.2521 16.3367C23.6848 12.3607 20.9192 5.4303 14.9921 5.4303V6.9303Z" fill="#FFFFFF"></path><path d="M8.35677 7.78748L6.79845 9.39007H4.50523C3.67294 9.39007 3.00003 10.063 3.00003 10.8953V13.9499C3.00003 14.7734 3.66409 15.4374 4.47867 15.4551L6.78074 15.4906L11.1193 19.8291C11.2002 19.9067 11.302 19.959 11.4122 19.9796C11.5225 20.0002 11.6363 19.9881 11.7398 19.9448C11.8432 19.9015 11.9318 19.829 11.9946 19.7361C12.0574 19.6431 12.0917 19.5339 12.0932 19.4218V11.3645" fill="#FFFFFF"></path><path d="M11.4122 3.98583C11.302 4.00639 11.2002 4.0587 11.1193 4.13635L9.71725 5.823L12.0932 8.20076V4.54364C12.0917 4.43151 12.0574 4.32228 11.9946 4.22936C11.9318 4.13645 11.8432 4.0639 11.7398 4.02063C11.6363 3.97737 11.5225 3.96527 11.4122 3.98583Z" fill="#FFFFFF"></path><path d="M5.70944 4.80359L20.9385 20.0238" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.75 18.5099C16.557 18.3138 17.318 17.9619 17.9901 17.474" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path><path d="M15.6243 9.13196C15.2101 9.13196 14.8743 9.46774 14.8743 9.88196C14.8743 10.2962 15.2101 10.632 15.6243 10.632V9.13196ZM15.6243 10.632C15.6793 10.632 15.7976 10.6598 15.968 10.835C16.1364 11.0083 16.2994 11.2725 16.4211 11.5853C16.5423 11.8969 16.6047 12.2111 16.6076 12.4603C16.6108 12.7388 16.5418 12.7992 16.569 12.7709L17.6472 13.8138C18.0275 13.4206 18.1125 12.8721 18.1075 12.4428C18.1022 11.9842 17.994 11.4913 17.8191 11.0415C17.6446 10.593 17.3858 10.1415 17.0434 9.78937C16.703 9.43921 16.2214 9.13196 15.6243 9.13196V10.632Z" fill="#FFFFFF"></path></svg>        
+       </span> </div>
+         </span>
+ <video playsinline width="100%" height="auto" preload="metadata" src="https://stories.join-stories.com/nubiance/161089ef-d942-4bec-8b57-280c87aed996/story.mp4?t=1706627266189#t=0.001"></video>
+    </div>   
+  </div>
+{% endfor %} -->
+</div>
+
+      
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<style>
+  .sinppets_popup{
+   transition:all 0.7s;
+
+  }
+  .close_video svg path {
+    stroke: #fff;
+}
+  .muted_btns {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+  .close_video{
+    margin:15px 0;
+  }
+  .close_video svg {
+    height: 8px;
+}
+  .pp_btn span,.muted_btns span,.close_video  span {
+    background: #0a0a0a80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+
+.pp_btn span svg,.muted_btns span svg ,.close_video  svg{
+    width: 14px;
+}
+  .muted_btns {
+    display: flex;
+    flex-direction: column;
+}
+span.actions_btns {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    height: 100%;
+      z-index: 2;
+      cursor: pointer;
+
+  opacity:0.3;
+}
+.video_parent>div:hover span.actions_btns {
+    opacity:1;
+}
+  .video_parent {
+    width: fit-content;
+    margin: auto;
+    display: block;
+     max-width: 200px;
+}
+
+ .slide_video.image>div {
+    height: 100%;
+}
+
+.slide_video.image .card-play-button {
+    display: none;
+}
+  /* .iframe_video {
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 100%;
+} */
+  .iframe_video{
+        transform: scale(0);
+   transition:all 0.7s;
+    display:flex;
+  }
+.slide_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.video_parent {
+  width: 100%;
+  margin: auto;
+  display: block;
+  max-width: 100%; /* Adjust if necessary */
+}
+
+.iframe_video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+      padding: 0 30px;
+}
+.video_parent>div {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      position: relative;
+}
+  .play_btn {
+    cursor: pointer;
+}
+
+.slide_item {
+    max-width: 400px;
+    margin: auto;
+}
+.inter_cont {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.close {
+    position: absolute;
+    z-index: 1;
+}
+.video_parent video {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+  img.stars_img {
+    width: 35%;
+    margin: 0 auto;
+}
+  .stars_rating_top {
+    text-align: center;
+}
+.stars_rating_top p {
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;
+    font-weight: 200;
+    font-size: 16px;
+}
+.stars_rating_top p span {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+}
+</style>
+  <div class="main_presentation" style="margin-bottom:{{ section.settings.margin_btm }}px;margin-top:{{ section.settings.margin_tp }}px;">
+  <div class="page-width">
+    <div class="stars_rating_top">
+    <img class="stars_img" src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/Group_1298.png?v=1744884591" alt="stars">
+    <p>
+      <span>4.9</span>
+      Amazing (1568 reviews)
+    </p>
+    </div>
+  <h2 class="{{ section.settings.heading_size | escape }}">{{ section.settings.heading }}</h2>
+
+    <div class="scroller-container">
+      <div class="hide_svg left_btn" id="slideLeft" ><span> <div> 
+        <svg focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<path fill="currentColor" d="M28.000042,21.333332h-19.9445c-0.398139,0-0.729153-0.131943-0.993042-0.395832
+	c-0.263888-0.263889-0.395833-0.594904-0.395833-0.993042c0-0.398167,0.131945-0.729195,0.395833-0.993084
+	c0.263889-0.263889,0.594903-0.395832,0.993042-0.395832h19.9445l-5.6945-5.694459
+	c-0.277779-0.277779-0.409721-0.601848-0.395832-0.972209c0.013887-0.370361,0.155098-0.694429,0.423624-0.972208
+	c0.277779-0.277779,0.604166-0.418986,0.979166-0.423625c0.375-0.004611,0.701389,0.131958,0.979168,0.409709l8.069458,8.069458
+	c0.14814,0.148167,0.252308,0.300943,0.3125,0.458334c0.060169,0.157415,0.090252,0.32872,0.090252,0.513916
+	c0,0.185165-0.030083,0.356459-0.090252,0.513874c-0.060192,0.157417-0.16436,0.310196-0.3125,0.458334l-8.041668,8.041666
+	c-0.277779,0.277779-0.604166,0.414349-0.979166,0.40971c-0.375-0.004612-0.701387-0.145807-0.979166-0.423584
+	c-0.268528-0.277779-0.405111-0.606487-0.40975-0.986126c-0.00461-0.379612,0.131971-0.708305,0.40975-0.986084L28.000042,21.333332
+	z"/>
+</svg>
+</div></span></div>
+      <div class="scroller_presnt">
+        <!-- Dynamically generated thumbnails -->
+        {% for block in  section.blocks %}
+          <div class="slide_video {{ block.type }}" {% if block.type == 'image' %} popimg="{{ block.settings.popimg | img_url :'master' }}" {% endif %} >
+             <video class="video_short" playsinline width="100%" height="auto" preload="metadata" muted src="{{ block.settings.video_url }}"></video>
+
+       <div>     <img src="{{ block.settings.img | img_url  :'master' }}" alt="Video Thumbnail">
+       
+       </div>
+         <div class="card-play-button"><div class="card-play-button-icon" style="--join-card-icon-width: 33.04125px; --join-card-icon-height: 33.04125px;"><svg viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="card-play-button-icon-default"><g filter="url(#filter0_b_16300_44334)"><path d="M23.6847 14.3826C24.7824 15.1813 24.7824 16.8183 23.6847 17.617L14.7669 24.1058C13.445 25.0676 11.5901 24.1234 11.5901 22.4886L11.5901 9.51096C11.5901 7.87617 13.445 6.93192 14.7669 7.89376L23.6847 14.3826Z" fill="#141414"></path></g><defs><filter id="filter0_b_16300_44334" x="7.59033" y="3.50781" width="20.9175" height="24.9844" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feGaussianBlur in="BackgroundImageFix" stdDeviation="2"></feGaussianBlur><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_16300_44334"></feComposite><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_16300_44334" result="shape"></feBlend></filter></defs></svg><svg viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="card-play-button-icon-hover"><path d="M8.4165 17.4365V23.9655L15.0557 23.9655" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24.3081 14.5635L24.3081 8.03446L17.6689 8.03453" stroke="#141414" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+          <div class="copy_data_video" style="display:none;">
+            <div class="video_parent {{ block.type }}">
+    <div>
+          {% if block.type == 'image' %}
+<img src="{{ block.settings.popimg | img_url :'master' }}" class="pops_img">
+            <span class="actions_btns">
+        <div class="close_video">
+          <span>
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+  <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+</path></svg></span>
+          
+        </div>
+         </span>
+      {% else %}
+      <span class="actions_btns">
+        <div class="close_video">
+          <span>
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+  <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+</path></svg></span>
+          
+        </div>
+       <div class="play_btn pp_btn" style="display:none;"><span> <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.547 12.4326C19.8163 12.6325 19.8163 13.0357 19.547 13.2356L10.9304 19.6318C10.6004 19.8767 10.1323 19.6412 10.1323 19.2303L10.1323 6.43788C10.1323 6.027 10.6004 5.7915 10.9304 6.03641L19.547 12.4326Z" fill="#FFFFFF"></path></svg>
+       </span> </div>
+        <div class="pause_btn pp_btn" > <span> <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.60449 18.3375L9.60449 7.66309" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.6963 18.3375L16.6963 7.66309" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </span>
+        </div>
+        <!-- <div class="muted_btns">
+          <span class="mute_1">
+<svg class="mute_1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9921 6.22363C17.4697 6.22363 21 7.94976 21 12.2293C21 17.0022 16.4693 18.6891 14.9921 18.6891" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.6243 9.47412C16.2021 9.71658 17.4254 10.4558 17.4254 12.1628C17.4254 14.1423 16.2021 14.8333 15.6243 15.1566" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4.47864 15.4464C3.66406 15.4287 3 14.7646 3 13.9412V10.8865C3 10.0631 3.66406 9.39901 4.47864 9.38131L6.78072 9.34589L11.1192 4.17965C11.2002 4.102 11.302 4.04969 11.4122 4.02913C11.5225 4.00857 11.6363 4.02067 11.7398 4.06393C11.8432 4.1072 11.9318 4.17975 11.9946 4.27266C12.0574 4.36558 12.0917 4.47481 12.0932 4.58694V19.4131C12.0917 19.5252 12.0574 19.6344 11.9946 19.7274C11.9318 19.8203 11.8432 19.8928 11.7398 19.9361C11.6363 19.9793 11.5225 19.9914 11.4122 19.9709C11.302 19.9503 11.2002 19.898 11.1192 19.8204L6.78072 15.4818L4.47864 15.4464Z" fill="#FFFFFF"></path></svg>
+</span>  <span class="mute_2" style="display:none;"><svg class="mute_2"   width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9921 5.4303C14.5779 5.4303 14.2421 5.76608 14.2421 6.1803C14.2421 6.59451 14.5779 6.9303 14.9921 6.9303V5.4303ZM14.9921 6.9303C19.6072 6.9303 21.7286 12.3311 19.1167 15.3564L20.2521 16.3367C23.6848 12.3607 20.9192 5.4303 14.9921 5.4303V6.9303Z" fill="#FFFFFF"></path><path d="M8.35677 7.78748L6.79845 9.39007H4.50523C3.67294 9.39007 3.00003 10.063 3.00003 10.8953V13.9499C3.00003 14.7734 3.66409 15.4374 4.47867 15.4551L6.78074 15.4906L11.1193 19.8291C11.2002 19.9067 11.302 19.959 11.4122 19.9796C11.5225 20.0002 11.6363 19.9881 11.7398 19.9448C11.8432 19.9015 11.9318 19.829 11.9946 19.7361C12.0574 19.6431 12.0917 19.5339 12.0932 19.4218V11.3645" fill="#FFFFFF"></path><path d="M11.4122 3.98583C11.302 4.00639 11.2002 4.0587 11.1193 4.13635L9.71725 5.823L12.0932 8.20076V4.54364C12.0917 4.43151 12.0574 4.32228 11.9946 4.22936C11.9318 4.13645 11.8432 4.0639 11.7398 4.02063C11.6363 3.97737 11.5225 3.96527 11.4122 3.98583Z" fill="#FFFFFF"></path><path d="M5.70944 4.80359L20.9385 20.0238" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.75 18.5099C16.557 18.3138 17.318 17.9619 17.9901 17.474" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path><path d="M15.6243 9.13196C15.2101 9.13196 14.8743 9.46774 14.8743 9.88196C14.8743 10.2962 15.2101 10.632 15.6243 10.632V9.13196ZM15.6243 10.632C15.6793 10.632 15.7976 10.6598 15.968 10.835C16.1364 11.0083 16.2994 11.2725 16.4211 11.5853C16.5423 11.8969 16.6047 12.2111 16.6076 12.4603C16.6108 12.7388 16.5418 12.7992 16.569 12.7709L17.6472 13.8138C18.0275 13.4206 18.1125 12.8721 18.1075 12.4428C18.1022 11.9842 17.994 11.4913 17.8191 11.0415C17.6446 10.593 17.3858 10.1415 17.0434 9.78937C16.703 9.43921 16.2214 9.13196 15.6243 9.13196V10.632Z" fill="#FFFFFF"></path></svg>        
+       </span> </div> -->
+         
+         </span>
+
+ <video playsinline muted width="100%" height="auto" preload="metadata" data-src="{{ block.settings.video_url }}"></video>
+         {% endif %}
+    </div>   
+  </div>
+          
+          </div>
+          </div>
+        {% endfor %}
+      </div>
+ 
+            <div class="  right_btn" id="slideRight" ><span> <div>   <svg focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<path fill="currentColor" d="M28.000042,21.333332h-19.9445c-0.398139,0-0.729153-0.131943-0.993042-0.395832
+	c-0.263888-0.263889-0.395833-0.594904-0.395833-0.993042c0-0.398167,0.131945-0.729195,0.395833-0.993084
+	c0.263889-0.263889,0.594903-0.395832,0.993042-0.395832h19.9445l-5.6945-5.694459
+	c-0.277779-0.277779-0.409721-0.601848-0.395832-0.972209c0.013887-0.370361,0.155098-0.694429,0.423624-0.972208
+	c0.277779-0.277779,0.604166-0.418986,0.979166-0.423625c0.375-0.004611,0.701389,0.131958,0.979168,0.409709l8.069458,8.069458
+	c0.14814,0.148167,0.252308,0.300943,0.3125,0.458334c0.060169,0.157415,0.090252,0.32872,0.090252,0.513916
+	c0,0.185165-0.030083,0.356459-0.090252,0.513874c-0.060192,0.157417-0.16436,0.310196-0.3125,0.458334l-8.041668,8.041666
+	c-0.277779,0.277779-0.604166,0.414349-0.979166,0.40971c-0.375-0.004612-0.701387-0.145807-0.979166-0.423584
+	c-0.268528-0.277779-0.405111-0.606487-0.40975-0.986126c-0.00461-0.379612,0.131971-0.708305,0.40975-0.986084L28.000042,21.333332
+	z"/>
+</svg>
+</div></span></div>
+
+      
+    </div>
+    
+ 
+  </div>
+</div>
+<!-- <script>
+
+ gsap.registerPlugin(ScrollTrigger);
+
+$('.slide_video').click(function(){
+  console.log('test')
+  const div1 =  $(this).find('.card-play-button');
+  const div2 = document.getElementById('cart-icon-bubble');  
+  
+  if (!div2) return;  
+
+   const div2Rect = div2.getBoundingClientRect();
+  const div1Rect = div1[0].getBoundingClientRect();  
+  
+   const offsetX = div2Rect.left - div1Rect.left;
+  const offsetY = div2Rect.top - div1Rect.top;
+
+   gsap.to(div1, {
+    duration: 1,  
+    x: offsetX,   
+    y: offsetY,   
+    ease: "power2.out"  
+  });
+});
+
+
+</script> -->
+
+<style>
+
+.sinppets_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #020202d1;
+}
+
+.sinppets_popup .close svg {
+    width: 27px;
+}
+.fixed_area {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+  .scroller_presnt::-webkit-scrollbar {
+  display: none;
+}
+  
+div#slideLeft span,#slideRight span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 13px;
+}
+  #slideRight span {
+ padding-left: 13px;
+  }
+div#slideLeft span div,#slideRight span div {
+    background: #ffffffb0;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+div#slideLeft span svg.icon.icon-arrow {
+    width: 22px;
+    transform: rotate(180deg);
+    position: relative;
+}
+.left_btn {
+    position: absolute;
+    width: 8%;
+    z-index: 1;
+    height: 100%;
+  z-index:3;
+}
+.right_btn{
+   position: absolute;
+    width: 8%;
+    z-index: 1;
+    height: 100%;
+      right: 0;
+ z-index:3;
+}
+
+.scroller-container {
+    display: flex;
+    position: relative;
+}
+
+
+
+  
+  .scroller-presnt {
+    position: relative;
+    width: 100%;
+  }
+ 
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+.slide_video {
+    cursor: pointer;
+    width: 21%;
+    display: inline-block;
+    margin: 0 3px;
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.slide_video img {
+    max-width: 100%;
+    object-fit: cover;
+  display:block;
+}
+
+.scroller_presnt {
+    overflow: scroll;
+    gap: 31px;
+   scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.card-play-button {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+      z-index: 2;
+}
+.card-play-button-icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+svg.card-play-button-icon-hover {
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: auto;
+    transition:   transform 0.5s; 
+    transform: scale(.5);
+        opacity: 0;
+
+}
+.slide_video video {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.slide_video:hover svg.card-play-button-icon-default {
+    opacity: 0;
+}
+
+
+
+.slide_video:hover svg.card-play-button-icon-hover {
+    opacity: 1 !important;
+     transform: scale(.8);
+}
+ .hide_svg{
+       opacity: 0 !important;
+
+ }
+.scroller_presnt {
+    
+    margin-bottom: 0px;
+}
+  .main_presentation h2 {
+    text-align: center;
+        font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+ .sinppets_popup .slick-prev:before, .sinppets_popup .slick-next:before {
+    font-family: 'slick' !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    opacity: .75 !important;
+    color: white !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+  .sinppets_popup .slick-prev:before {
+    content: '←' !important;
+}
+  .pops_img{
+    max-width:100%;
+    height:auto;
+  }
+  .video_parent.image>div {
+    
+        justify-content: flex-start;
+     
+}
+@media screen and (max-width:767px)
+{
+  .slide_video {
+   height: 218px;
+    width: 44%; 
+            border-radius: 17px;
+}
+  div#slideLeft span div, #slideRight span div{
+    min-width:40px;
+  }
+  .right_btn,.left_btn {
+ 
+    width: 22%; 
+}
+span.actions_btns {
+ 
+    opacity: 1;
+}
+.iframe_video  .slick-next {
+    right: 0;
+}
+.iframe_video  .slick-prev {
+    left: 0;
+    z-index: 1;
+}
+ .iframe_video  .slick-prev:before,.iframe_video  .slick-next:before {
+    
+    color: black; 
+}
+  
+}
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const container = document.querySelector('.scroller_presnt');
+  const buttonRight = document.getElementById('slideRight');
+  const buttonLeft = document.getElementById('slideLeft');
+
+  // Adjust the scroll behavior for the buttons
+  buttonRight.onclick = function () {
+    container.scrollLeft += 200; // Scroll by 200px to the right
+  };
+
+  buttonLeft.onclick = function () {
+    container.scrollLeft -= 200; // Scroll by 200px to the left
+  };
+
+  // Detect when scroll reaches the end or beginning
+  container.addEventListener('scroll', function () {
+   
+    const scrollLeft = container.scrollLeft;
+    const scrollWidth = container.scrollWidth;
+    const containerWidth = container.clientWidth;
+
+    // When scrolled to the right (end)
+    if (scrollLeft + containerWidth >= scrollWidth) {
+      $('div#slideRight').addClass('hide_svg')
+    }else{
+       $('div#slideRight').removeClass('hide_svg')
+    }
+
+    // When scrolled to the left (beginning)
+    if (scrollLeft === 0) {
+    $('div#slideLeft').addClass('hide_svg')
+    }else{
+          $('div#slideLeft').removeClass('hide_svg')
+
+    }
+  });
+});
+
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Presentation",
+  "class": "index-section",
+  "settings": [
+     {
+	"type": "text",
+	"id": "heading",
+ 
+	"label": "Heading"
+	},
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:sections.all.heading_size.label",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.normal.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.large.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.xl.label"
+        }
+        ],
+      "default": "h2"
+    },
+  {
+      "type": "range",
+      "id": "margin_tp",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },{
+      "type": "range",
+      "id": "margin_btm",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 0
+    }
+],
+    "blocks" : [
+        {
+            "type" : "video",
+            "name" : "video",
+            "settings" :[
+                {
+      "type": "text",
+      "label": "Video URL",
+      "id": "video_url",
+      "default": "https://cdn.shopify.com/videos/c/o/v/17c23713604c4bda9a21bc38f68ab613.mp4"
+    }, {
+      "type": "image_picker",
+      "label": "Image ",
+      "id": "img",
+    }
+            ]
+        },{
+            "type" : "image",
+            "name" : "image",
+            "settings" :[
+             {
+      "type": "image_picker",
+      "label": "Image ",
+      "id": "img",
+    },{
+      "type": "image_picker",
+      "label": "Popup Image ",
+      "id": "popimg",
+    }
+            ]
+        }
+    ],
+  "presets": [
+    {
+      "name": "Presentation"
+      }
+  ]
+}
+{% endschema %}
+
+
+<script>
+    $("body").on("click",".play_btn", function(){
+
+                 $(this).hide();
+                $(this).next('.pause_btn').show()
+                $(this).parent().next('video')[0].play();
+              })
+
+      $("body").on("click",".pause_btn", function(){
+
+                 $(this).hide();
+                $(this).prev('.play_btn').show()
+                $(this).parent().next('video')[0].pause();
+              })
+      $("body").on("click",".muted_btns", function(){
+
+               var video = $(this).parent().next('video')[0];
+              video.muted = !video.muted;  // Toggle mute state
+              if(video.muted){
+                $(this).find('svg.mute_1').hide()
+               $(this).find('svg.mute_2').show()
+              }else{
+         $(this).find('svg.mute_2').hide()
+               $(this).find('svg.mute_1').show()
+              }
+             });
+      $("body").on("click",".close_video", function(){
+
+               $('.iframe_video').css('transform','scale(0)')
+              setTimeout(function(){
+                $('.sinppets_popup').css('transform','translateY(-200%)')
+                $('.sinppets_popup').css('visibility','hidden')
+              },700)
+              $('.video_parent.slick-active').find('video')[0].pause();
+            })
+
+
+
+
+           $("body").on("mouseenter", ".slide_video", function() {
+            
+                  var video = $(this).find('.video_short')[0];  // Get the DOM element, not jQuery object
+                  $(this).find('.video_short').css('opacity','1')
+                  video.currentTime = 0;  // Start the video from 0 seconds
+                  video.play();  // Play the video
+
+                  // Listen for the 'ended' event when the video finishes playing
+                video.addEventListener('timeupdate', function() {
+                      var endTime = 2; // Set the desired end time (e.g., 4 seconds)
+
+                      // If the video has reached the end time (or beyond)
+                      if (video.currentTime >= endTime) {
+                          video.currentTime = 0;  // Reset to the beginning (0 seconds)
+                          video.play();  // Play again from the start
+                      }
+                  });
+              });
+
+                   $("body").on("mouseleave", ".slide_video", function() {
+                  var video = $(this).find('.video_short')[0];  // Get the DOM element, not jQuery object
+                   video.pause();
+                         $(this).find('.video_short').css('opacity','0')
+              });
+
+
+
+              $('.iframe_video').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      console.log('test3 change')
+                setTimeout(function(){
+               console.log('play ')
+                   $('.video_parent.slick-active').find('video')[0].play();
+                },100)
+
+
+
+              })
+      $("body").on("click",".slide_video", function(){
+  
+
+                 var that=$(this)
+      var inds=that.index();
+        if($('.iframe_video').hasClass('slick-initialized')){
+           $('.iframe_video').slick('unslick');
+        }
+
+
+                  $('.iframe_video').empty()
+                that.parent().find('.slide_video').each(function(){
+                  var vhtm=$(this).find('.copy_data_video').html();
+
+                    $('.iframe_video').append(vhtm);
+
+                })
+                 $('.iframe_video .video_parent').each(function(){
+                   var src=$(this).find('video').attr('data-src');
+                   $(this).find('video').attr('src',src);
+                 })
+                      setTimeout(function(){
+ if(that.hasClass('image')){
+               
+             }else{
+               
+             }
+             $('.iframe_video').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll:1
+      });
+
+                      $('.iframe_video').slick('slickGoTo', inds)
+                          // setTimeout(function(){
+
+                          //    $('.video_parent.slick-active').find('video')[0].pause();
+                          // },500)
+
+                      },100)
+
+
+
+                          $('.sinppets_popup').css('visibility','visible')
+                   $('.sinppets_popup').css('transform','translateY(0%)')
+                setTimeout(function(){
+
+           $('.iframe_video').css('transform','scale(1)')
+                },1000)
+
+              })
+</script>

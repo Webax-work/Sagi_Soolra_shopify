@@ -1,0 +1,61 @@
+<div class="special-calls-section">
+  <div class="container">
+    <div class="inner-special-txt-sec">
+      <h2>{{ section.settings.title }}</h2>
+      <p>{{ section.settings.description }}</p>
+      <div class="soolra-btn-coll special-calls">
+        <div class="buy-btn">
+          <a href="{{ section.settings.buy_now_link }}">Buy Now</a>
+        </div>
+        <div class="apple-btn">
+          <a href="{{ section.settings.app_store_link }}" class="app-store-btn">
+            <span class="apple-icon"><i class="fa-brands fa-apple"></i></span>
+            <div class="btn-text">
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "Custom Special",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Special call for Developers"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Experienced coders and aspiring game developers alike are encouraged to explore the full range of capabilities offered by SOOLRA and to contribute to the evolution of retro gaming."
+    },
+    {
+      "type": "url",
+      "id": "buy_now_link",
+      "label": "Buy Now Link"
+    },
+    {
+      "type": "url",
+      "id": "app_store_link",
+      "label": "App Store Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Special",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

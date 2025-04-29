@@ -1,0 +1,68 @@
+<div class="social-media-sec">
+  <div class="container">
+    <div class="inner-social-media">
+      {% if section.settings.title != blank %}
+        <h3>{{ section.settings.title }}</h3>
+      {% endif %}
+      <div class="social-icon">
+        {% for block in section.blocks %}
+          {% if block.type == 'social' %}
+            <a href="{{ block.settings.link }}" target="_blank" rel="noopener">
+              {% if block.settings.icon %}
+                <img src="{{ block.settings.icon | img_url: 'master' }}" alt="Social Icon">
+              {% endif %}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Social Sec",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Follow Us"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "social",
+      "name": "Social Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Social Icon"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Custom Social Sec",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "social",
+          "settings": {
+            "icon": "",
+            "link": "#"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

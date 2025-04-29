@@ -1,0 +1,126 @@
+{% comment %} <style>
+  .product-slider-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.main-slider {
+  margin-bottom: 20px;
+}
+
+.main-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.thumbnail-slider {
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnail-slide {
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.thumbnail-slider .slick-current .thumbnail-slide {
+  border-color: #000;
+}
+
+</style> {% endcomment %}
+
+<div class="product-slider-wrapper">
+  <div class="main-slider">
+    {% for image in product.images %}
+      <div class="main-slide">
+        <img src="{{ image | img_url: '500x500' }}" alt="{{ image.alt | escape }}">
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="thumbnail-slider">
+    {% for image in product.images %}
+      <div class="thumbnail-slide">
+        <img src="{{ image | img_url: '100x100' }}" alt="{{ image.alt | escape }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+                <div class="product__title" {{ block.shopify_attributes }}>
+                  <h1>{{ product.title | escape }}:</h1>
+                  <a href="{{ product.url }}" class="product__title">
+                    <h2 class="h1">
+                      {{ product.title | escape }}
+                    </h2>
+                  </a>
+                </div>
+                <div class="text_random">
+<p>
+  Transform your iPhone into a high-performance gaming console
+</p>
+                </div>
+                <!-- {%- if product.description != blank -%}
+                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                    {{ product.description }}
+                  </div>
+                {%- endif -%} -->
+                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                  {%- render 'price',
+                    product: product,
+                    use_variant: true,
+                    show_badges: true,
+                    price_class: 'price--large'
+                  -%}
+                </div>
+                
+<script>
+  $(document).ready(function () {
+  $('.main-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: false,
+    centerMode: true,
+    asNavFor: '.thumbnail-slider',
+    adaptiveHeight: true,
+  });
+
+  $('.thumbnail-slider').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.main-slider',
+    dots: false,
+    arrows: false,
+    infinite: false,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 5,
+        }
+      }
+    ]
+  });
+});
+
+</script>

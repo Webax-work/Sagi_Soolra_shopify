@@ -1,0 +1,159 @@
+<div class="main-banner-sec">
+  <div class="container">
+    <div class="inner-banner-coll">
+      <div class="soolra-txt-coll">
+        <h2>
+          {{ section.settings.heading }}
+          <span>
+            {{ section.settings.subheading }}
+          </span>
+        </h2>
+        <p>
+          {{ section.settings.description }}
+        </p>
+      </div>
+      <div class="seconds-soolar-coll">
+        <div class="soolar-animation-sec">
+<div class="fan-box" onclick="toggleFanSet2()">
+
+    <div class="img-box img-a4">
+    <img src="{{ section.settings.fan_image_4 | img_url: 'master' }}" alt="Fan Blade 4">
+  </div>
+    <div class="img-box img-a3">
+    <img src="{{ section.settings.fan_image_3 | img_url: 'master' }}" alt="Fan Blade 3">
+  </div>
+    <div class="img-box img-a2">
+    <img src="{{ section.settings.fan_image_2 | img_url: 'master' }}" alt="Fan Blade 2">
+  </div>
+  <div class="img-box img-a1">
+    <img src="{{ section.settings.fan_image_1 | img_url: 'master' }}" alt="Fan Blade 1">
+      <img class="hide-image" src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/Group_1269_1.png?v=1744208307" alt="Fan Blade 5">
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="soolra-btn-coll">
+        <div class="buy-btn">
+          <a href="{{ section.settings.buy_button_link }}">{{ section.settings.buy_button_text }}</a>
+        </div>
+        <div class="apple-btn">
+          <a href="{{ section.settings.app_store_link }}" class="app-store-btn">
+            <span class="apple-icon"><i class="fa-brands fa-apple"></i></span>
+            <div class="btn-text">
+              <small>{{ section.settings.app_store_small_text }}</small>
+              <strong>{{ section.settings.app_store_strong_text }}</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function setupFanHover(boxes) {
+    if (window.innerWidth <= 767) {
+      // On mobile: add open class by default
+      boxes.forEach(box => box.classList.add('open'));
+      return;
+    }
+
+    // On desktop: add hover effect
+    boxes.forEach(box => {
+      box.addEventListener('mouseenter', () => {
+        boxes.forEach(b => b.classList.add('open'));
+      });
+      box.addEventListener('mouseleave', () => {
+        boxes.forEach(b => b.classList.remove('open'));
+      });
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const boxes = document.querySelectorAll('.img-a1, .img-a2, .img-a3, .img-a4');
+    setupFanHover(boxes);
+  });
+</script>
+
+
+
+
+{% schema %}
+{
+  "name": "Custom Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "SOOLRA:"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Transform your iPhone into a high-performance gaming console"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Discover a new level of gaming with SOOLRA, featuring an attachable controller and a dynamic app for an unparalleled gaming experience."
+    },
+{
+  "type": "image_picker",
+  "id": "fan_image_1",
+  "label": "Image 1"
+},
+{
+  "type": "image_picker",
+  "id": "fan_image_2",
+  "label": "Image 2"
+},
+{
+  "type": "image_picker",
+  "id": "fan_image_3",
+  "label": "Image 3"
+},
+{
+  "type": "image_picker",
+  "id": "fan_image_4",
+  "label": "Image 4"
+},
+    {
+      "type": "text",
+      "id": "buy_button_text",
+      "label": "Buy Button Text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "buy_button_link",
+      "label": "Buy Button Link"
+    },
+    {
+      "type": "url",
+      "id": "app_store_link",
+      "label": "App Store Button Link"
+    },
+    {
+      "type": "text",
+      "id": "app_store_small_text",
+      "label": "App Store Small Text",
+      "default": "Download on the"
+    },
+    {
+      "type": "text",
+      "id": "app_store_strong_text",
+      "label": "App Store Bold Text",
+      "default": "App Store"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Banner"
+    }
+  ]
+}
+{% endschema %}

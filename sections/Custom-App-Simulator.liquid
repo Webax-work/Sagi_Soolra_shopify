@@ -1,0 +1,136 @@
+<div class="app-simulator">
+  <div class="container">
+    <div class="row">
+      <div class="app-simultor-coll">
+        <h3>{{ section.settings.title }}</h3>
+        <p>{{ section.settings.description }}</p>
+        <div class="soolra-btn-coll app-simultor-extra">
+          <div class="apple-btn">
+            <a href="{{ section.settings.app_store_link }}" class="app-store-btn">
+              <span class="apple-icon"><i class="fa-brands fa-apple"></i></span>
+              <div class="btn-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </div>
+            </a>
+          </div>
+          <div class="buy-btn">
+            <a href="{{ section.settings.buy_now_link }}">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="app-simulator-boy-coll">
+        <div class="app-simultor-boy-image-box">
+          <img src="{{ section.settings.main_image | img_url: 'master' }}">
+        </div>
+      </div>
+    </div>
+    <div class="inner-main-app-simulator-sec">
+      <div class="inner-row">
+        {% for block in section.blocks %}
+          <div class="inner-main-same-coll">
+            <div class="inner-main-image-box">
+              <img src="{{ block.settings.image | img_url: 'master' }}">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+          <div class="mobile-slider-section">
+        <div class="container">
+            <div class="phone-slider-wrapper">
+                <div class="phone-frame">
+                    <img src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/phone.png?v=1744145886"
+                        alt="Phone Frame">
+                    <div class="slider-container">
+                        <div class="slider">
+                            <div><img
+                                    src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/Group_1269_2.png?v=1744221653"
+                                    alt="Slide 1"></div>
+                            <div><img
+                                    src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/Group_1270_1.png?v=1744221654"
+                                    alt="Slide 2"></div>
+                            <div><img
+                                    src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/Group_1271_1.png?v=1744221655"
+                                    alt="Slide 3"></div>
+                          <div><img
+                                    src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/Mask_Group_261.jpg?v=1744221650"
+                                    alt="Slide 4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    $('.slider').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Simulator",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "SOOLRA App Emulator"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "The Soolra app is an advanced emulator for retro games..."
+    },
+    {
+      "type": "url",
+      "id": "app_store_link",
+      "label": "App Store Link"
+    },
+    {
+      "type": "url",
+      "id": "buy_now_link",
+      "label": "Buy Now Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Feature Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Simulator",
+      "category": "Custom",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}

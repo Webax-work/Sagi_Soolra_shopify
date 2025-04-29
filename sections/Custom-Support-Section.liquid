@@ -1,0 +1,57 @@
+<div class="support-sec">
+  <div class="container">
+    <div class="inner-support-sec">
+      <div class="row">
+        <div class="same-support-coll">
+          <div class="support-image-box">
+            <img src="{{ section.settings.support_image | img_url: 'master' }}" alt="Support Image">
+          </div>
+        </div>
+        <div class="same-support-coll">
+          <div class="support-content-txt">
+            <h3>{{ section.settings.support_heading }}</h3>
+            <p>{{ section.settings.support_text }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="support-rope-image-box">
+        <img src="{{ section.settings.rope_image | img_url: 'master' }}" alt="Rope Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Support",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "support_image",
+      "label": "Support Image"
+    },
+    {
+      "type": "text",
+      "id": "support_heading",
+      "label": "Heading",
+      "default": "Contact & Support"
+    },
+    {
+      "type": "textarea",
+      "id": "support_text",
+      "label": "Description",
+      "default": "Have questions or need assistance? Our team is here to help. Whether you need product support, technical guidance, or have inquiries about Soolra, we’re just a message away."
+    },
+    {
+      "type": "image_picker",
+      "id": "rope_image",
+      "label": "Rope Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Support"
+    }
+  ]
+}
+{% endschema %}

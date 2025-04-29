@@ -1,0 +1,606 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  letter-spacing: normal;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.countdown-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    color: #fff;
+    font-weight: 700;
+    background: transparent linear-gradient(180deg, #FF8100 0%, #FF5700 100%) 0% 0% no-repeat padding-box;
+}
+.countdown-title {
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+}
+
+.time-box {
+    background: #fff;
+    color: #000;
+    padding: 5px 3px 3px;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    min-width: 22px;
+    transition: all .3s ease;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: Rubik,sans-serif;
+}
+
+.time-box small {
+  display: inline;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.colon {
+  font-size: 22px;
+  margin: 0 5px;
+}
+
+.main-countain-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-box span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 13px;
+}
+.limited-offer-sec .inner-offer-sec span {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Rubik";
+  color: #000000;
+}
+
+.limited-offer-sec .inner-offer-sec {
+  text-align: center;
+}
+
+.limited-offer-sec {
+  padding: 3px 0;
+}
+
+.free-shiping-col {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111111;
+  padding: 5px 15px;
+  box-sizing: border-box;
+  margin-top: 0px;
+}
+
+.free-gaming-col {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+}
+
+.inner-shiping-col {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 10px;
+}
+
+.gaming-txt-box span {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Rubik";
+}
+
+.shiping-txt-box span {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+
+.video-section {
+  position: relative;
+  max-width: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.video-section .video-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #000;
+  font-size: 20px;
+  transition: background 0.3s ease;
+}
+
+.video-section video#promoVideo {
+  height: 100%;
+  object-fit: cover;    box-shadow: 0px 3px 6px #00000063;
+  width: 100%;
+}
+
+.key-features-col ul li {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 17px;
+  margin-bottom: 17px;
+}
+
+.inner-benifits-txt p {
+    font-size: 16px;
+    line-height: 18px;
+    font-family: Rubik;
+    font-weight: 400;
+    color: #000000;
+}
+.inner-benifits-txt {
+  margin-bottom: 20px;
+}
+
+.key-features-img-box {
+  width: 25px;
+  height: 25px;
+}
+
+.key-features-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.key-features-txt-box span {
+    font-size: 16px;
+    line-height: 15px;
+    display: block;
+    font-family: Rubik;
+    font-weight: 400;
+    color: #000000;
+}
+
+.included-benefits-sec {
+  margin-top: 15px;
+}
+
+.order-today-sec .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.order-txt-box p {
+    font-size: 15px;
+    line-height: 15px;
+    font-family: Rubik;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.order-txt-box p span {
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.order-truck-image-box img {
+  width: 17px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.solaar-emulator-mobile-sec a.app-emulator-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e4e4;
+  padding: 5px 35px 12px 35px;
+  border-radius: 12px;
+  width: fit-content;
+  margin: 0 auto;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.solaar-emulator-mobile-sec {
+  margin-top: 20px;
+}
+
+.solaar-emulator-mobile-sec .btn-text small {
+  display: block;
+  font-size: 16px;
+  font-family: "Kanit";
+  font-weight: 200;
+  line-height: 15px;
+  color: #1d1d1d;
+}
+
+.solaar-emulator-mobile-sec .btn-text strong {
+  font-weight: 200;
+  line-height: 15px;
+  color: #1d1d1d;
+  font-size: 24px;
+}
+
+.solaar-emulator-mobile-sec .btn-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.solaar-emulator-mobile-sec span.apple-icon i {
+  color: #1d1d1d;
+  font-size: 30px;
+}
+
+.emulator-txt p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  font-family: "Kanit";
+  color: #fff;
+}
+
+.emulator-txt {
+  text-align: center;
+}
+
+.apple-btn {
+  margin-top: 20px;
+}
+
+.main-emulator-txt-col {
+  background: #303030;
+  padding: 20px;
+}
+
+.inner-emulator-image-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.emulator-txt h4 {
+  font-family: 'Oswald';
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.selling-points-sec .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+}
+
+.same-selling-points-col {
+  text-align: center;
+}
+
+.selling-points-heading-box {
+  padding: 0 10px;
+}
+
+.selling-points-image-box img {
+    display: block;
+    margin: 0 auto;
+    height: 37px;
+    width: 37px;
+    object-fit: contain;
+}
+
+.selling-points-sec {
+  padding: 20px 0;
+  background: #f9f6f6;
+}
+
+.pure-fun-imag-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.header-logo-box a {
+  width: fit-content;
+  display: block;
+}
+span.variant_prices {
+  display: none !important;
+}
+.main_presentation {
+  display: none;
+}
+div#shopify-section-template--19035141341425__pdp_bottom_details_AhmU7m {
+  display: none;
+}
+.product
+  .product__info-container
+  .product-form__input--pill:first-child
+  input[type="radio"]:checked
+  + label {
+  background: #fff !important;
+  color: #000 !important;
+}
+a.apple__pp img {
+    width: fit-content;
+    height: 47px;
+    display: block;
+    object-fit: contain;
+}
+.free-shiping-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.payment_img {
+    justify-content: left !important;
+    padding-top: 25px;
+}
+.variant-select-iphone {
+    padding: 7px !important;
+    background: linear-gradient(180deg,#f1f1f1,#fff);
+    background-color: #f5f5f5 !important;
+    box-shadow: inset 0 1px 1px #fff9,0 2px 1px #00000026 !important;
+    background-image: url(/cdn/shop/files/dropdown-1.png?v=1745444758) !important;
+    background-size: 30px !important;
+    background-position: center right !important;
+    background-repeat: no-repeat !important;
+    cursor: pointer;
+}
+.variant_details span {
+    font-size: 16px;
+    padding-top: 15px;
+    display: block;
+}
+.product .product__info-container .product-form__input--pill:first-child label:hover {
+    border-color: #FF8100;
+}
+/***Responsive-media-query***/
+@media screen and (max-width: 767px) {
+
+  .variant_details span {
+    padding-top: 0;
+}
+  .payment_img {
+    margin-top: -15px;
+}
+
+  header.sticky {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+}
+  .header-outer-sec::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 4px;
+    background: transparent linear-gradient(90deg, #1D1D1D 0%, #7A00BE 51%, #1D1D1D 100%) 0% 0% no-repeat padding-box;
+}
+.percentage_off span.price-item--savings {
+    font-weight: 500;
+}
+.header-outer-sec::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 4px;
+    background: transparent linear-gradient(90deg, #1D1D1D 0%, #7A00BE 51%, #1D1D1D 100%) 0% 0% no-repeat padding-box;
+}
+}
+@media screen and (max-width: 480px) {
+
+  .solaar-emulator-mobile-sec {
+    margin-top: 0;
+    padding-top: 0px;
+    background: #f9f6f6;
+}
+  .product
+    .product__info-container
+    .product-form__input--pill:first-child
+    label {
+    width: 100% !important;
+  }
+  div#shopify-section-template--19035141341425__pdp_bottom_details_AhmU7m {
+    display: block;
+  }
+  .main_presentation {
+    display: block;
+  }
+  .d-flex.column {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 7px;
+    padding-left: 10px;
+  }
+  .product
+    .product__info-container
+    .product-form__input--pill:nth-child(2)
+    label {
+    width: 100%;
+    margin: 10px 8px;
+    background: transparent linear-gradient(180deg, #f1f1f1, #fff) 0% 0%
+      no-repeat padding-box;
+    box-shadow: 0 1px 4px #0000005e;
+    border-radius: 8px;
+    padding: 10px 5px;
+    color: #000;
+    font: 16px / 14px Kanit;
+    width: 100%;
+    display: inline-block;
+    border: 2px solid transparent;
+  }
+  .variant_details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  span.variant_prices {
+    display: flex !important;
+    gap: 6px;
+  }
+  span.variant_prices {
+    display: flex;
+    gap: 6px;
+    color: #a203ff !important;
+    align-items: center;
+    margin-top: 5px;
+    font-weight: 500 !important;
+  }
+  p.compare-price {
+    font-size: 14px;
+    color: #000 !important;
+     font-weight: 300;
+  }
+p.saving {
+    background: #a203ff;
+    color: #fff;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 3px 12px;
+    font-weight: 500;
+  text-transform: uppercase;
+}
+  .product__info-container input[type="radio"][name^="Color"] + label:before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 27% !important;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff5700;
+    border-radius: 50%;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+  }
+  .product
+    .product__info-container
+    .product-form__input--pill:nth-child(2)
+    label {
+    width: 100%;
+    margin: 22px 8px !important;
+  }
+  .d-flex.column img {
+    margin-top: -30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .countdown-title {
+    font-size: 13px;
+  }
+
+  .gaming-txt-box span {
+    font-size: 13px;
+  }
+
+  .shiping-txt-box span {
+    font-size: 13px;
+  }
+
+  .order-txt-box p {
+    font-size: 14px;
+  }
+
+  .emulator-txt h4 {
+    font-size: 22px;
+  }
+
+  .emulator-txt p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .product .product__info-container .product-form__input--pill:first-child label {
+    padding: 0 5px 0 40px !important;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
+}
+p.saving {
+    font-size: 11px;
+}
+p.compare-price {
+    font-size: 12px;
+}
+.variant_details span {
+    font-size: 16px;
+}
+}

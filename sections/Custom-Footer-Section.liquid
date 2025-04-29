@@ -1,0 +1,108 @@
+<footer>
+  <div class="main-footer-sec">
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo -->
+        <div class="footer-logo-box">
+          {% if section.settings.footer_logo %}
+            <img src="{{ section.settings.footer_logo | img_url: 'medium' }}" alt="Footer Logo">
+          {% else %}
+            <img src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/Screenshot_2_1-removebg-preview.png?v=1744064196" alt="Default Footer Logo">
+          {% endif %}
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+          <h4>Quick Links</h4>
+          <div class="footer-menu">
+            <ul>
+              {% if linklists[section.settings.footer_menu] %}
+                {% for link in linklists[section.settings.footer_menu].links %}
+                  <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                {% endfor %}
+              {% else %}
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Developers</a></li>
+                <li><a href="#">Contact Us</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="contact-us-txt-coll">
+          <h4>Connect with us</h4>
+          <div class="contact-us-social">
+            {% if section.settings.facebook_url != blank %}
+              <a href="{{ section.settings.facebook_url }}"><img src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/facebook-icon.svg?v=1744062567"></a>
+            {% endif %}
+            {% if section.settings.instagram_url != blank %}
+              <a href="{{ section.settings.instagram_url }}"><img src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/instagram-icon.svg?v=1744062568"></a>
+            {% endif %}
+            {% if section.settings.linkedin_url != blank %}
+              <a href="{{ section.settings.linkedin_url }}"><img src="https://cdn.shopify.com/s/files/1/0738/5900/6705/files/linkedin-icon.svg?v=1744062568"></a>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="copy-right-sec">
+    <div class="container">
+      <div class="inner-copy-right-coll">
+        <span>{{ section.settings.copyright_text }}</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Custom Footer Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "linkedin_url",
+      "label": "LinkedIn URL"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright Text",
+      "default": "©Copyright SOOLRA. All rights reserved"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Footer Section"
+    }
+  ]
+}
+{% endschema %}
