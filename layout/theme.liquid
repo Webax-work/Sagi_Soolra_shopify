@@ -268,8 +268,7 @@
         }
       }
     {% endstyle %}
-
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+{% render 'theme-css' %}
     {% if template == 'product' %}
       {% render 'custom-pdp-css' %}
       {% endif %}
