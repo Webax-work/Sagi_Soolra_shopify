@@ -28,15 +28,25 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    {% if template contains "index" %}
+    <script type="lazyload_js" src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+    <script type="lazyload_js" src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+    <script type="lazyload_js" src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script type="lazyload_js" src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+    <script type="lazyload_js" src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+    <script type="lazyload_js" src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
+    <script type="lazyload_js" data-src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
+{% else %}
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
-
-
+    <script data-src="https://code.jquery.com/jquery-3.7.1.js"></script>
+{%endif%}
+    
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -314,7 +324,6 @@
       >
     {%- endif -%}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
