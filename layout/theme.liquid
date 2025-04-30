@@ -395,7 +395,7 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-<script>
+<script type="lazyload_js">
   document.addEventListener("DOMContentLoaded", function () {
     const section = document.querySelector(".video-section");
     const observer = new IntersectionObserver(
@@ -452,7 +452,7 @@
   });
 </script>
 
-  <script>
+  <script type="lazyload_js">
     $(document).ready(function() {
   $('.product-form__submit').on('click', function() {
     $('body').addClass('custom-add-to-class');
@@ -467,7 +467,7 @@
     document.querySelector('.menu-bar').classList.toggle('active');
   }
 </script>
-    <script>
+    <script type="lazyload_js">
 jQuery(document).ready(function($) {
   function enableStickyForm() {
     var $form = $('.product-form');
@@ -526,7 +526,7 @@ jQuery(document).ready(function($) {
     </script>
 
 
-    <script>
+    <script type="lazyload_js">
   document.addEventListener('change', function(event) {
     if (event.target.classList.contains('variant-select-iphone')) {
       const selectElement = event.target;
