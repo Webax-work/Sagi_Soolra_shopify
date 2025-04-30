@@ -270,9 +270,9 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {% if template == 'product' %}
-    {{ 'custom-pdp.css' | asset_url | stylesheet_tag }}
+      {% render 'custom-pdp-css' %}
       {% endif %}
-    {{ 'custom-style.css' | asset_url | stylesheet_tag }}
+    {% render 'custom-style-css' %}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
